@@ -1,0 +1,70 @@
+input
+{
+    width: 15em;
+    height: 5em;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input::after
+{
+    width: 15em;
+    height: 5em;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input:hover
+{    
+    width: 15em;
+    height: 5em;
+    background-color: rgb(0, 128, 58);
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#desc
+{
+    font-size: 30px;
+}
+
+b
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    font-size: 40px;
+    padding: 2em;
+}
+
+body
+{
+    background-image: url("704600.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img
+{
+    padding: 2em;
+    border-radius: 50%;
+    height: 12em;
+    width: 12em;
+}
+
+div
+{
+    border-radius: 50px;
+    height: 35em;
+    width: 25em;
+    border:5px solid green;
+    background-color: lightgreen;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
