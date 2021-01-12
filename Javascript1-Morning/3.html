@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body
+        {
+            background-color: rgb(29, 172, 53);
+        }
+        div
+        {
+            text-align: center;
+            height: 15em;
+            width: 40em;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%) ;
+            background-color: lightcoral;
+        }
+    </style>
+    <script>
+        function onclicker()
+        {
+            var n = document.getElementById("1").value;
+            var suc = "All digits of this number are same";
+            var fail = "All digits of this number are not same";
+            var temp = n%10;
+            while(n!=0)
+            {
+                if(n%10 != temp)
+                {
+                    document.getElementById("end").innerHTML = fail;
+                    break;
+                }
+                else
+                    n = Math.floor(n/10);
+            }
+            if(n == 0)
+                document.getElementById("end").innerHTML = suc;
+        }
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Enter number to check whether all digits are same or not</h1>
+        <p>
+            <input type="number" placeholder="Number" id="1">
+            <input type="submit" onclick="onclicker()">
+        </p> 
+        <p id="end"></p>
+    </div>
+</body>
+</html>

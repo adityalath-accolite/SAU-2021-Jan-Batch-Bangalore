@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body
+        {
+            background-color: rgb(29, 172, 53);
+        }
+        div
+        {
+            text-align: center;
+            height: 15em;
+            width: 35em;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%) ;
+            background-color: lightcoral;
+        }
+    </style>
+    <script>
+        function onclicker()
+        {
+            var n = document.getElementById("1").value;
+            var sum = 0;
+            for(var i=0;i<n.length;i++)
+            {
+                if(n.charAt(i).match(/[0-9]/))
+                    sum += parseInt(n.charAt(i));
+            }
+            document.getElementById("end").innerHTML = sum;
+        }
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Enter a String to add all its integers</h1>
+        <p>
+            <input type="text" placeholder="Enter a string" id="1">
+            <input type="submit" onclick="onclicker()">
+        </p> 
+        <p id="end"></p>
+    </div>
+</body>
+</html>

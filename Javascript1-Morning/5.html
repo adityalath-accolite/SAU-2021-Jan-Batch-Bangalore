@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body
+        {
+            background-color: darkorange;
+        }
+        div
+        {
+            text-align: center;
+            height: 30em;
+            width: 30em;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%) ;
+            background-color: lightcoral;
+        }
+    </style>
+    <script>
+        function onclicking()
+        {
+            var fname = document.getElementById("1").value;
+            var lname = document.getElementById("2").value;
+            var mail = document.getElementById("6").value;
+            var enrolledIn = document.getElementById("7").value;
+            var gender;
+            if(document.getElementById("3").checked == true)
+                gender = 'Male';
+            else if(document.getElementById("4").checked == true)
+                gender = "Female";
+            else
+                gender = "Prefer not to say";
+            var obj = {
+                firstname : fname,
+                lastname : lname,
+                email : mail,
+                Gender : gender,
+                coursename : enrolledIn
+            }
+            console.log(obj);
+            document.getElementById("end").innerHTML = 'Thank you so much';
+        }
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Student Form</h1>
+        <p>First-name: <input type="text" placeholder="First-name" id="1"></p> 
+        <p>Last-Name: <input type="text" placeholder="Last-name" id="2"></p> 
+        <p>Email: <input type="email" placeholder="some@example.com" id="6" ></p>
+        <p>Gender: 
+            <input type="radio" id="3">Male
+            <input type="radio" id="4">Female
+            <input type="radio" id="5">Prefer not to say
+        </p>
+        <p>Enrolled in: 
+            <select id="7">
+                <option value="1">B.Tech</option>
+                <option value="2">B.E</option>
+                <option value="3">MBA</option>
+                <option value="4">Agriculture</option>
+            </select>
+        </p>
+        <p><input onclick="onclicking()" type="submit"></p>
+        <p id="end"></p>
+    </div>
+</body>
+</html>
