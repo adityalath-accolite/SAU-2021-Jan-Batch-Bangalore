@@ -1,8 +1,7 @@
 4.Remove primary index and add a particular index
 
 removing primary index
-DROP PRIMARY INDEX 
-    ON couchbasedemo USING GSI;
+Drop INDEX couchbasedemo.idx_primary_cbdemo
     
 adding an index
-CREATE INDEX next ON couchbasedemo USING GSI;
+create index `someIndex` on `couchbasedemo` (`other`)
