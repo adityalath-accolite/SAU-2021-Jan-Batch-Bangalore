@@ -1,0 +1,27 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+#main
+{
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(191, 102, 132);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#main > div
+{
+    text-align: center;
+    border-radius: 10%;
+    height: 30em;
+    width: 25em;
+    background-color:  rgb(255, 140, 71);
+}
+#star
+{
+    color: red;
+}

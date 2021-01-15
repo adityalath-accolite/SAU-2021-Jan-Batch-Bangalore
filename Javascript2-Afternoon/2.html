@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="2.css">
+    <script src="2.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div>
+            <h1>Student Form</h1>
+            <form action="#" onsubmit="return onclicking()">
+                <p>First-name: <input type="text" placeholder="First-name" id="1" required><span id="star">*</span></p> 
+                <p>Last-Name: <input type="text" placeholder="Last-name" id="2" required><span id="star">*</span></p> 
+                <p>Email: <input type="email" placeholder="some@example.com" id="3" required><span id="star">*</span></p>
+                <p>Roll-Number: <input type="number" placeholder="roll number" id="4" required><span id="star">*</span></p>
+                <p>D.O.B: <input type="date" placeholder="dd/mm/yyyy" id="5" required><span id="star">*</span></p>  
+                <p>Gender: 
+                    <input type="radio" id="gender" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="gender" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="gender" name="gender" value="other">
+                    <label for="other">Other</label>
+                    <span id="star">*</span>
+                </p>
+                <p>Enrolled in: 
+                    <select id="6">
+                        <option value="1">B.Tech</option>
+                        <option value="2">B.E</option>
+                        <option value="3">MBA</option>
+                        <option value="4">Agriculture</option>
+                    </select>   
+                    <span id="star">*</span>
+                </p>
+                <p>Occupation: <input type="text" placeholder="Occupation" id="7"></p>  
+                <p><input type="submit"></p>
+                <p id="end"></p>    
+            </form>
+        </div>
+        <div>
+            <h1>Fetch details</h1>
+            <p>Enter Roll number: <input type="number" id="8"></p>
+            <button onclick="getDetails()">Get</button> 
+            <p id="result"></p>
+        </div>
+    </div>
+</body>
+</html>
