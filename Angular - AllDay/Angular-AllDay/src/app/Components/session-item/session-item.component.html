@@ -1,0 +1,15 @@
+<div>
+<div class="list" >
+    <p>{{session.title}}</p>
+    <button class="btn" title="Details" (click)="detailFunc(session)">Details</button>
+    <button class="btn" title="Edit" (click)="editFunc(session)"> Edit </button>
+    <button class="btn" title="Delete" (click)="deleteFunc(session)">Delete</button>
+</div>
+<app-desc *ngIf="a != 0"
+    [a] = "a"
+></app-desc>
+<!-- <app-edit *ngIf="b != 0"
+    [b] = "b"
+>
+</app-edit> -->
+</div>

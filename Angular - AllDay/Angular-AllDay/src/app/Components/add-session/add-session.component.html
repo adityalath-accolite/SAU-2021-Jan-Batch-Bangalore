@@ -1,0 +1,30 @@
+<div>
+<h1>Add new...</h1>
+<form class="form" (ngSubmit)="onsubmit()">
+    <p>SessionId:
+        <input type="number" name="id" placeholder="SessionId" [(ngModel)]="id" required>
+    </p>
+    <p>
+        Date: <input type="text" name="date" placeholder="DD/MM/YYYY" [(ngModel)]="date" required>
+    </p>
+    <p>
+        Title: <input type="text" name="title" placeholder="Topic" [(ngModel)]="title" required>
+    </p>
+    <p>
+        Trainer Name: <input type="text" name="name" placeholder="name" [(ngModel)]="name" required>
+    </p>
+    <p>
+        Submission Date: <input type="text" name="lastdate" placeholder="DD/MM/YYYY" [(ngModel)]="lastdate" required>
+    </p>
+    <p>
+        SkypeId: <input type="text" name="skype"  [(ngModel)]="skype">
+    </p>
+    <p>
+        emailId: <input type="email" name="mail" placeholder="example@example.com"  [(ngModel)]="mail">
+    </p>
+    <p>
+        Timing: <input type="text" name="timing" placeholder="Morning/Afternoon/All-day" [(ngModel)]="timing" required>
+    </p>
+    <p><input type="submit" id="btn"></p>
+</form>
+</div>

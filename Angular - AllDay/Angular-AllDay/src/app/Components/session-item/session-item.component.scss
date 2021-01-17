@@ -1,0 +1,20 @@
+.list
+{
+    display: flex;
+    flex-direction: row;
+    background-color: lightgreen;
+}
+.list > .btn
+{
+    margin: 10px;
+    text-size-adjust:inherit;
+    flex:1;
+    height: 20px;
+    border-radius: 100%;
+    background-color: lightpink;
+}
+.list > p
+{
+    margin: 10px;
+    flex: 80;
+}

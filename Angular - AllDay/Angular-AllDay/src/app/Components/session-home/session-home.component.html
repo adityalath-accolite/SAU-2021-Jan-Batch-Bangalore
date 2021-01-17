@@ -1,0 +1,14 @@
+<div>
+    <app-add-session
+        (event) = "addsession($event)"
+    ></app-add-session>
+    <h1>Courses list</h1>
+    <app-session-item 
+        *ngFor="let session of sessions"
+        [session]="session"
+        (emitter) = "onEmmit($event)"
+    >
+</app-session-item>
+
+
+</div>
