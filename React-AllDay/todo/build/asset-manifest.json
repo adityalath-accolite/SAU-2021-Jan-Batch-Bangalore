@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/SAU-2021-Jan-Batch-Bangalore/static/css/main.9b705ca1.chunk.css",
+    "main.js": "/SAU-2021-Jan-Batch-Bangalore/static/js/main.c2781d78.chunk.js",
+    "main.js.map": "/SAU-2021-Jan-Batch-Bangalore/static/js/main.c2781d78.chunk.js.map",
+    "runtime-main.js": "/SAU-2021-Jan-Batch-Bangalore/static/js/runtime-main.d602485b.js",
+    "runtime-main.js.map": "/SAU-2021-Jan-Batch-Bangalore/static/js/runtime-main.d602485b.js.map",
+    "static/js/2.66f73117.chunk.js": "/SAU-2021-Jan-Batch-Bangalore/static/js/2.66f73117.chunk.js",
+    "static/js/2.66f73117.chunk.js.map": "/SAU-2021-Jan-Batch-Bangalore/static/js/2.66f73117.chunk.js.map",
+    "static/js/3.6508f504.chunk.js": "/SAU-2021-Jan-Batch-Bangalore/static/js/3.6508f504.chunk.js",
+    "static/js/3.6508f504.chunk.js.map": "/SAU-2021-Jan-Batch-Bangalore/static/js/3.6508f504.chunk.js.map",
+    "index.html": "/SAU-2021-Jan-Batch-Bangalore/index.html",
+    "static/css/main.9b705ca1.chunk.css.map": "/SAU-2021-Jan-Batch-Bangalore/static/css/main.9b705ca1.chunk.css.map",
+    "static/js/2.66f73117.chunk.js.LICENSE.txt": "/SAU-2021-Jan-Batch-Bangalore/static/js/2.66f73117.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d602485b.js",
+    "static/js/2.66f73117.chunk.js",
+    "static/css/main.9b705ca1.chunk.css",
+    "static/js/main.c2781d78.chunk.js"
+  ]
+}
