@@ -28,9 +28,12 @@ public class PlayerRepo {
 		return entityManager.find(Player.class,id);
 	}
 	
-	public void deletePlayerByObject(Player p)
+	public void deletePlayerById(int id)
 	{
-		entityManager.remove(p);
+		Player m = entityManager.find(Player.class,id);
+		m.setCoach(null);
+		entityManager.merge(m);
+		entityManager.remove(m);
 	}
 	
 	public List<Player> getPlayerByTeam(String team)
@@ -38,9 +41,8 @@ public class PlayerRepo {
 		Query query = entityManager.createQuery("select m from player m where m.team= :team");
 		//Query query = entityManager.createQuery("select m from player m where team=" + team);
 		//entityManager.createNativeQuery("select * from player m where team=" + team);
-		query.setParameter(1, team);
+		query.setParameter("team", team);
 		return query.getResultList();      //query.getSingleResult();
-		
 	}
 	
 }
