@@ -1,10 +1,13 @@
 package com.example.cricketmanagement.Hibernate2.Evening.Entity;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Coach {
@@ -21,6 +24,9 @@ public class Coach {
 	
 	@Column 
 	private int fromYear;
+	
+	@OneToMany()
+	private Set<Player> players;
 	
 	public int getId() {
 		return id;
@@ -56,6 +62,14 @@ public class Coach {
 	
 	public Coach() {
 		super();
+	}
+
+	public Set<Player> getPlayers() {
+		return players;
+	}
+
+	public void setPlayers(Set<Player> players) {
+		this.players = players;
 	}
 		
 }
