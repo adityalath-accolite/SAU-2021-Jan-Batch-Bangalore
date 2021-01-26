@@ -32,18 +32,18 @@ public class Hibernate2EveningApplication implements CommandLineRunner{
 		
 		//1.Adding a player
 		Coach coach = new Coach();
-		coach.setName("Ravi Shastri");
+		coach.setName("Rahul Dravid");
 		coach.setTeam("IND");
-		coach.setFromYear(2018);
+		coach.setFromYear(2019);
 		
 		Sponsor sponsor = new Sponsor();
-		sponsor.setName("Adidas");
-		sponsor.setOwner("Adolf Dassler");
+		sponsor.setName("Alibaba");
+		sponsor.setOwner("Jack Ma");
 		
 		Player player = new Player();
-		player.setName("Rohit Sharma");
-		player.setRuns(13596);
-		player.setWickets(15);
+		player.setName("Rishab Pant");
+		player.setRuns(3596);
+		player.setWickets(0);
 		player.setTeam("IND");
 		player.setCoach(coach);
 		player.setSponser(sponsor);
@@ -52,37 +52,19 @@ public class Hibernate2EveningApplication implements CommandLineRunner{
 		
 		// 2.Getting player based on id
 		Player p = playerRepo.getPlayer(1);
-		System.out.println("Player at id " + p.getId() + " is " + p.getName() + " with " + p.getRuns() + " runs and "+ p.getWickets() + " from " + p.getTeam());
+		System.out.println("Player at id " + p.getId() + " is " + p.getName() + " with " + p.getRuns() + " runs and "+ p.getWickets() + " wickets from " + p.getTeam());
 
-		//3.Adding another player with same coach
-		player = playerRepoJPA.getPlayerById(1);
-		coach = (Coach)player.getCoach();
-		sponsor.setName("Alibaba");
-		sponsor.setOwner("Jack Ma");
-		Player player1 = new Player();
-		player1.setName("Virat Kohli");
-		player1.setRuns(15596);
-		player1.setWickets(6);
-		player1.setTeam("IND");
-		player1.setCoach(coach);
-		player1.setSponser(sponsor);
-		
-		playerRepo.addPlayer(player1);           //or playerRepoJPA.save(player)
-		
-		//4.Deleting a player
-		playerRepo.deletePlayerByObject(p);
-		
-		//5.Deleting a player using JPA
-		playerRepoJPA.deletePlayerById(2);
-		
-		
-		//6.getting players of team india
+
+		//3.getting players of team india
 		List<Player> list = playerRepo.getPlayerByTeam("IND");
 		for(Player p1:list)
 		{
 			System.out.println("Player at id " + p1.getId() + " is " + p1.getName() + " with " + p1.getRuns() + " runs and " + p1.getWickets() + " from " + p1.getTeam());
 		}
 		
+		//4.Deleting a player
+		playerRepo.deletePlayerById(p.getId());	
+		System.out.println("Player data deleted successfully");
 	}
 
 }
