@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+  
+  <bean id="triangle" class="com.au.spring.Triangle" >  
+  		<property name="Height" value="${triangle.height}"/>
+     	<property name="Width" value="${triangle.width}"/>
+  </bean>
+  
+  <!-- Use of .properties file  -->
+  
+  <bean id="rectangle" class="com.au.spring.Rectangle">
+     	
+  </bean>
+  
+  <bean id="PointA" class="com.au.spring.Point">
+     	<property name="x" value="${pointA.pointX}"/>
+     	<property name="y" value="${pointA.pointY}"/>
+  </bean>
+ 
+  <bean id="PointB" class="com.au.spring.Point">
+        <property name="x" value="${pointB.pointX}"/>
+        <property name="y" value="${pointB.pointY}"/>
+  </bean>
+  
+  <bean id="PointC" class="com.au.spring.Point">
+        <property name="x" value="${pointC.pointX}"/>
+     	<property name="y" value="${pointC.pointY}"/>
+  </bean>
+  
+  <bean id="Point1" class="com.au.spring.Point">
+     	<property name="x" value="${point1.pointX}"/>
+     	<property name="y" value="${point1.pointY}"/>
+  </bean>
+  <bean id="Point2" class="com.au.spring.Point">
+     	<property name="x" value="${point2.pointX}"/>
+     	<property name="y" value="${point2.pointY}"/>
+  </bean>
+  <bean id="Point3" class="com.au.spring.Point">
+     	<property name="x" value="${point3.pointX}"/>
+     	<property name="y" value="${point3.pointY}"/>
+  </bean>
+  <bean id="Point4" class="com.au.spring.Point">
+     	<property name="x" value="${point4.pointX}"/>
+     	<property name="y" value="${point4.pointY}"/>
+  </bean>
+  
+  <!-- Own class which implements BeanFactoryPostProcessor -->
+  <bean class="com.au.spring.MyBeanFactoryPP"> </bean>
+  
+  <!-- Externalize properties -->
+  <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+     <property name="locations" value="pointsConfig.properties">
+     </property>
+  </bean>
+  
+  <!-- @Autowired annotation is a postprocessor -->
+  <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+  
+</beans>
